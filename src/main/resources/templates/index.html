@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+		<meta charset="ISO-8859-1">
+		<title>Mortgage Dashboard</title>
+		<div th:replace="fragments/header :: css"/>
+		<div th:replace="fragments/header :: js"/>
+</head>
+<body onload="initialize()">
+	<div id="con">
+		<nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+		  <div class="container-fluid">
+		    <img src="img/mortgage.jpg" alt="Avatar" class="image" width="30" height="40">
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="mynavbar">
+		      <ul class="navbar-nav me-auto">
+		        <li class="nav-item">
+		          <a class="nav-link" href="javascript:void(0)">Link</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="javascript:void(0)">Link</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="javascript:void(0)">Link</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex">
+		        <input class="form-control me-2" type="text" placeholder="Search">
+		        <button class="btn btn-primary" type="button">Search</button>
+		      </form>
+		    </div>
+		  </div>
+		</nav>
+		<br>
+		<div id="content" class="container">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link active" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"  
+			    	id="loans-tab" data-bs-target="#loans" aria-controls="loans">Loans</button>
+			  </li>
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"  
+			    	id="locations-tab" data-bs-target="#locations" aria-controls="locations" 
+			    	onclick="getLocations()">Locations</button>
+			  </li>
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"  
+			    	id="homes-tab" data-bs-target="#homes" aria-controls="homes" 
+			    	onclick="getHomes()">Homes</button>
+			  </li>
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"  
+			    	id="lands-tab" data-bs-target="#lands" aria-controls="lands" 
+			    	>Lands</button>
+			  </li>
+			  <li class="nav-item" role="presentation">
+			    <button class="nav-link" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"  
+			    	id="applications-tab" data-bs-target="#applications" aria-controls="applications" 
+			    	>Applications</button>
+			  </li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+			  <div class="tab-pane fade" id="locations" role="tabpanel" aria-labelledby="locations-tab">
+			  	<br>
+			  	<div th:replace="fragments/locations :: accordian"></div> 
+			  </div>
+			  <div class="tab-pane fade" id="homes" role="tabpanel" aria-labelledby="homes-tab">
+			  	<br>
+			  	<div th:replace="fragments/homes :: accordian"></div> 
+			  </div>
+			  <div class="tab-pane fade" id="lands" role="tabpanel" aria-labelledby="lands-tab">
+			  	<br>
+			  	
+			  </div>
+			  <div class="tab-pane fade" id="loans" role="tabpanel" aria-labelledby="loans-tab">
+			  	<br>
+			  	
+			  </div>
+			  <div class="tab-pane fade" id="applications" role="tabpanel" aria-labelledby="applications-tab">
+			  	<br>
+			  	
+			  </div>
+			  
+			</div>
+		</div>
+		<div id="footer">
+			<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+			  <div class="container-fluid">
+			    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+			    <div class="collapse navbar-collapse" id="mynavbar">
+			      <ul class="navbar-nav me-auto">
+			        <li class="nav-item">
+			          <a class="nav-link" href="javascript:void(0)">Copyright@Ravi</a>
+			        </li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+			<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

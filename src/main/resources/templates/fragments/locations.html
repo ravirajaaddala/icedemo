@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+</head>
+<body>
+	<div th:fragment="accordian">
+		<br>
+		<div id="accordionLocations">
+				    <div class="card">
+				      <div class="card-header">
+				        <a class="collapsed btn" data-bs-toggle="collapse" href="#locationscollapseTwo">
+				          New Location
+				      	</a>
+				      </div>
+				      <div id="locationscollapseTwo" class="collapse" data-bs-parent="#accordionLocations">
+				        <div class="card-body">
+				        	<br>		      
+						  <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="city" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "city"/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="zipcode" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "zipcode"/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="county" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "county"/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="state" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "state"/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="country" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "country"/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <button type = "button"  
+					         	class = "btn btn-info btn-block"
+					         	onclick="addlocation()">Create Location</button>
+					      </div>	
+				        </div>
+				       </div>
+				      </div>
+				      <div class="card">
+					      <div class="card-header">
+					        <a class="btn" data-bs-toggle="collapse" href="#locationscollapseOne">
+					           Locations
+					        </a>
+					      </div>
+					      <div id="locationscollapseOne" class="collapse" data-bs-parent="#accordionLocations">
+					        <div class="card-body">
+					        	<br>
+								<table id="table_alllocations" 
+									class="display" 
+									style="width:100%">
+							       <!-- Header Table -->
+							       <thead>
+							            <tr>
+							            	<th>city</th>
+							            	<th>county</th>
+											<th>zipcode</th>
+											<th>state</th>
+							                <th>country</th>
+							            </tr>
+							        </thead>
+							        <tbody></tbody>
+							        <!-- Footer Table -->
+							        <tfoot>
+							            <tr>
+							            	<th>city</th>
+							            	<th>county</th>
+											<th>zipcode</th>
+											<th>state</th>
+							                <th>country</th>
+							            </tr>
+							        </tfoot>
+							    </table>
+							    <br>
+					        </div>
+					      </div>
+					    </div>
+				    </div>
+				  </div>
+	
+</body>
+</html>

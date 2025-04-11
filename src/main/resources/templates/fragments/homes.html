@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+</head>
+<body>
+	<div th:fragment="accordian">
+		<br>
+		<div id="accordionHomes">
+				    <div class="card">
+				      <div class="card-header">
+				        <a class="collapsed btn" data-bs-toggle="collapse" href="#homescollapseTwo">
+				          New Home
+				      	</a>
+				      </div>
+				      <div id="homescollapseTwo" class="collapse" data-bs-parent="#accordionHomes">
+				        <div class="card-body">
+				        	<br>	
+				          <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="hometype" type = "text" class = "form-control" placeholder = "single family or town home or condo" />
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homearea" type = "text" class = "form-control" placeholder = "area" />
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homestreetaddress" type = "text" class = "form-control" placeholder = "streetaddress" />
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homeprice" type = "number" class = "form-control" placeholder = "price" />
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homedescription" type = "text" class = "form-control" placeholder = "description" />
+					      </div>
+					      <br>	      
+						  <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homecity" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "city" disabled/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homezipcode" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	onkeyup="suggestions(event,'homezipcode')" 
+					         	placeholder = "zipcode"/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homecounty" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "county" disabled/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homestate" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "state" disabled/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <input id="homecountry" 
+					         	type = "text" 
+					         	class = "form-control" 
+					         	placeholder = "country" disabled/>
+					      </div>
+					      <br>
+					      <div class = "input-group">
+					         <span class = "input-group-addon"></span>
+					         <button type = "button"  
+					         	class = "btn btn-info btn-block"
+					         	onclick="addhome()">Create Home</button>
+					      </div>	
+				        </div>
+				       </div>
+				      </div>
+				      <div class="card">
+					      <div class="card-header">
+					        <a class="btn" data-bs-toggle="collapse" href="#homescollapseOne">
+					           Search Homes
+					        </a>
+					      </div>
+					      <div id="homescollapseOne" class="collapse" data-bs-parent="#accordionHomes">
+					        <div class="card-body">
+					        	<br>
+								
+							    <br>
+					        </div>
+					      </div>
+					    </div>
+				    </div>
+				  </div>
+	
+</body>
+</html>
