@@ -35,3 +35,8 @@ Before running this application, ensure that you have the following installed:
 	http://localhost:8080/swagger-ui/index.html
 - H2 Console
 	http://localhost:8080/h2-console
+- Actuator
+	http://localhost:8081/actuator
+	http://localhost:8081/actuator/metrics
+	http://localhost:8081/actuator/health
+	
